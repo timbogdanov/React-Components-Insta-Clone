@@ -9,13 +9,13 @@ import "./Posts.css";
 
 // pass props in this file to
 const Post = props => {
-  const { postData } = props
+  const { postData } = props;
 
-  const [likes, setLikes] = useState(postData.likes)
+  const [likes, setLikes] = useState(postData.likes);
   // set up state for the likes
 
   const likesUpdater = () => {
-    setLikes(likes + 1)
+    setLikes(likes + 1);
   }
 
   return (
@@ -36,7 +36,7 @@ const Post = props => {
       <LikeSection updater={likesUpdater} likes={likes}/>
       <CommentSection
         postId={postData.imageUrl}
-        comments={postData.comments}
+        commentsData={postData.comments}
       />
     </div>
   );
